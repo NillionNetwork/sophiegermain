@@ -1,0 +1,28 @@
+[project]
+name = "sophiegermain"
+version = "0.1.0"
+description = """\
+    Pure-Python library that provides a selection of Sophie Germain primes.
+    """
+license = {text = "MIT"}
+authors = [
+    {name = "Nillion"},
+    {email = "engineering@nillion.com"}
+]
+readme = "README.rst"
+requires-python = ">=3.7"
+
+[project.urls]
+Repository = "https://github.com/nillion-oss/sophiegermain"
+
+[project.optional-dependencies]
+publish = [
+    "build~=0.10",
+    "twine~=4.0"
+]
+
+[build-system]
+requires = [
+    "setuptools>=68.0"
+]
+build-backend = "setuptools.build_meta"
