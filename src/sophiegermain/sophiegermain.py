@@ -93,4 +93,4 @@ def sophiegermain(bit_length: int) -> int:
     return _DATA[bit_length - 2]
 
 if __name__ == '__main__':
-    doctest.testmod()
+    doctest.testmod() # pragma: no cover
