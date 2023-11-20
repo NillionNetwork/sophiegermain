@@ -4,7 +4,7 @@ sophiegermain
 
 Pure-Python library that provides a selection of `Sophie Germain primes <https://en.wikipedia.org/wiki/Safe_and_Sophie_Germain_primes>`__.
 
-|pypi| |actions| |coveralls|
+|pypi| |readthedocs| |actions| |coveralls|
 
 .. |pypi| image:: https://badge.fury.io/py/sophiegermain.svg
    :target: https://badge.fury.io/py/sophiegermain
