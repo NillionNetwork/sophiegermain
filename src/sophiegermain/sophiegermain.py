@@ -79,7 +79,7 @@ def sophiegermain(bit_length: int) -> int:
     """
     if not isinstance(bit_length, int):
         raise TypeError('bit length must be an integer')
-    
+
     if bit_length < 2:
         raise ValueError(
             'all Sophie Germain primes have bit lengths of at least 2'

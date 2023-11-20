@@ -10,6 +10,10 @@ Pure-Python library that provides a selection of `Sophie Germain primes <https:/
    :target: https://badge.fury.io/py/sophiegermain
    :alt: PyPI version and link.
 
+.. |readthedocs| image:: https://readthedocs.org/projects/sophiegermain/badge/?version=latest
+   :target: https://sophiegermain.readthedocs.io/en/latest/?badge=latest
+   :alt: Read the Docs documentation status.
+
 Installation and Usage
 ----------------------
 This library is available as a `package on PyPI <https://pypi.org/project/sophiegermain>`__:
@@ -27,7 +31,43 @@ The library can be imported in the usual way:
 
 Development
 -----------
-All installation and development dependencies are fully specified in ``pyproject.toml``. The ``project.optional-dependencies`` object is used to `specify optional requirements <https://peps.python.org/pep-0621>`__ for various development tasks.
+All installation and development dependencies are fully specified in ``pyproject.toml``. The ``project.optional-dependencies`` object is used to `specify optional requirements <https://peps.python.org/pep-0621>`__ for various development tasks. This makes it possible to specify additional options (such as ``docs``, ``lint``, and so on) when performing installation using `pip <https://pypi.org/project/pip>`__:
+
+.. code-block:: bash
+
+    python -m pip install .[docs,lint]
+
+Documentation
+^^^^^^^^^^^^^
+The documentation can be generated automatically from the source files using `Sphinx <https://www.sphinx-doc.org>`__:
+
+.. code-block:: bash
+
+    python -m pip install .[docs]
+    cd docs
+    sphinx-apidoc -f -E --templatedir=_templates -o _source .. && make html
+
+Testing and Conventions
+^^^^^^^^^^^^^^^^^^^^^^^
+All unit tests are executed when using `pytest <https://docs.pytest.org>`__ (see the ``pyproject.toml`` file for configuration details):
+
+.. code-block:: bash
+
+    python -m pip install .[test]
+    python -m pytest
+
+Alternatively, all unit tests are included in the module itself and can be executed using `doctest <https://docs.python.org/3/library/doctest.html>`__:
+
+.. code-block:: bash
+
+    python src/sophiegermain/sophiegermain.py -v
+
+Style conventions are enforced using `Pylint <https://pylint.readthedocs.io>`__:
+
+.. code-block:: bash
+
+    python -m pip install .[lint]
+    python -m pylint src/sophiegermain
 
 Contributions
 ^^^^^^^^^^^^^
@@ -45,7 +85,7 @@ This library can be published as a `package on PyPI <https://pypi.org/project/so
 
     python -m pip install .[publish]
 
-Ensure that the correct version number appears in ``pyproject.toml``, and that any links in this README document have appropriate version numbers. Create and push a tag for this version (replacing ``?.?.?`` with the version number):
+Ensure that the correct version number appears in ``pyproject.toml``, and that any links in this README document to the Read the Docs documentation of this package (or its dependencies) have appropriate version numbers. Also ensure that the Read the Docs project for this library has an `automation rule <https://docs.readthedocs.io/en/stable/automation-rules.html>`__ that activates and sets as the default all tagged versions. Create and push a tag for this version (replacing ``?.?.?`` with the version number):
 
 .. code-block:: bash
 
