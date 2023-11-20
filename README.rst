@@ -4,7 +4,7 @@ sophiegermain
 
 Pure-Python library that provides a selection of `Sophie Germain primes <https://en.wikipedia.org/wiki/Safe_and_Sophie_Germain_primes>`__.
 
-|pypi|
+|pypi| |actions| |coveralls|
 
 .. |pypi| image:: https://badge.fury.io/py/sophiegermain.svg
    :target: https://badge.fury.io/py/sophiegermain
@@ -13,6 +13,14 @@ Pure-Python library that provides a selection of `Sophie Germain primes <https:/
 .. |readthedocs| image:: https://readthedocs.org/projects/sophiegermain/badge/?version=latest
    :target: https://sophiegermain.readthedocs.io/en/latest/?badge=latest
    :alt: Read the Docs documentation status.
+
+.. |actions| image:: https://github.com/nillion-oss/sophiegermain/workflows/lint-test-cover-docs/badge.svg
+   :target: https://github.com/nillion-oss/sophiegermain/actions/workflows/lint-test-cover-docs.yml
+   :alt: GitHub Actions status.
+
+.. |coveralls| image:: https://coveralls.io/repos/github/nillion-oss/sophiegermain/badge.svg?branch=main
+   :target: https://coveralls.io/github/nillion-oss/sophiegermain?branch=main
+   :alt: Coveralls test coverage summary.
 
 Installation and Usage
 ----------------------
@@ -49,7 +57,7 @@ The documentation can be generated automatically from the source files using `Sp
 
 Testing and Conventions
 ^^^^^^^^^^^^^^^^^^^^^^^
-All unit tests are executed when using `pytest <https://docs.pytest.org>`__ (see the ``pyproject.toml`` file for configuration details):
+All unit tests are executed and their coverage is measured when using `pytest <https://docs.pytest.org>`__ (see the ``pyproject.toml`` file for configuration details):
 
 .. code-block:: bash
 
