@@ -2,7 +2,7 @@
 sophiegermain
 =============
 
-Pure-Python library that provides a selection of `Sophie Germain primes <https://en.wikipedia.org/wiki/Safe_and_Sophie_Germain_primes>`__.
+Pure-Python library that provides a selection of `Sophie Germain primes <https://en.wikipedia.org/wiki/Safe_and_Sophie_Germain_primes>`__ that are organized by representation size.
 
 |pypi| |readthedocs| |actions| |coveralls|
 
@@ -21,6 +21,10 @@ Pure-Python library that provides a selection of `Sophie Germain primes <https:/
 .. |coveralls| image:: https://coveralls.io/repos/github/nillion-oss/sophiegermain/badge.svg?branch=main
    :target: https://coveralls.io/github/nillion-oss/sophiegermain?branch=main
    :alt: Coveralls test coverage summary.
+
+Purpose
+-------
+Some cryptographic protocols involve the use of `Sophie Germain and safe primes <https://en.wikipedia.org/wiki/Safe_and_Sophie_Germain_primes>`__. In such cases, it is often useful to choose a Sophie Germain or safe prime based on the range of values (*i.e.*, `congruence classes of integers <https://en.wikipedia.org/wiki/Modular_arithmetic>`__ or `finite field <https://en.wikipedia.org/wiki/Finite_field>`__ elements) that an instantiation of a protocol must accommodate. This library provides immediate access to the smallest Sophie Germain prime for each possible binary representation length (up to and including 1025 bits).
 
 Installation and Usage
 ----------------------

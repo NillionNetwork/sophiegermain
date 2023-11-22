@@ -2,7 +2,8 @@
 name = "sophiegermain"
 version = "0.1.0"
 description = """\
-    Pure-Python library that provides a selection of Sophie Germain primes.
+    Pure-Python library that provides a selection of Sophie Germain primes
+    that are organized by representation size.
     """
 license = {text = "MIT"}
 authors = [

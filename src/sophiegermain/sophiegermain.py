@@ -1,5 +1,6 @@
 """
-Pure-Python library that provides a selection of Sophie Germain primes.
+Pure-Python library that provides a selection of Sophie Germain primes
+that are organized by representation size.
 """
 # pylint: disable=too-many-lines
 from __future__ import annotations
@@ -1036,8 +1037,9 @@ _DATA: list[bytes] = [
 
 def sophiegermain(bit_length: int) -> int:
     """
-    Return the smallest Sophie Germain prime that can be represented using
-    the specified number of bits.
+    Return the smallest
+    `Sophie Germain prime <https://en.wikipedia.org/wiki/Safe_and_Sophie_Germain_primes>`__
+    the representation of which requires the specified number of bits.
     
     >>> sophiegermain(2)
     2
@@ -1052,8 +1054,8 @@ def sophiegermain(bit_length: int) -> int:
     >>> sophiegermain(1025).bit_length()
     1025
 
-    The result returned by :obj:`sophiegermain` can always be represented
-    using the specified number of bits.
+    The result returned by :obj:`sophiegermain` can be represented using the
+    specified number of bits.
     
     >>> all([sophiegermain(k).bit_length() == k for k in range(2, 1026)])
     True
