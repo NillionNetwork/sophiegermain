@@ -41,6 +41,23 @@ The library can be imported in the usual way:
     import sophiegermain
     from sophiegermain import sophiegermain
 
+This library makes it possible to retrieve instantly the smallest Sophie Germain prime that can be represented using the specified number of bits (up to 1025):
+
+.. code-block:: python
+
+    >>> sophiegermain(2)
+    2
+    >>> sophiegermain(8)
+    131
+    >>> sophiegermain(16)
+    32771
+    >>> sophiegermain(32)
+    2147483693
+    >>> sophiegermain(257)
+    115792089237316195423570985008687907853269984665640564039457584007913129658411
+    >>> sophiegermain(1025).bit_length()
+    1025
+
 Development
 -----------
 All installation and development dependencies are fully specified in ``pyproject.toml``. The ``project.optional-dependencies`` object is used to `specify optional requirements <https://peps.python.org/pep-0621>`__ for various development tasks. This makes it possible to specify additional options (such as ``docs``, ``lint``, and so on) when performing installation using `pip <https://pypi.org/project/pip>`__:
