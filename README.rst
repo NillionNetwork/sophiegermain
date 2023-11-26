@@ -41,7 +41,7 @@ The library can be imported in the usual way:
     import sophiegermain
     from sophiegermain import sophiegermain
 
-This library makes it possible to retrieve instantly the smallest Sophie Germain prime that can be represented using the specified number of bits (up to 1025):
+This library makes it possible to retrieve instantly the smallest Sophie Germain prime that is of a given bit length (up to and including 2049 bits):
 
 .. code-block:: python
 
@@ -57,6 +57,8 @@ This library makes it possible to retrieve instantly the smallest Sophie Germain
     115792089237316195423570985008687907853269984665640564039457584007913129658411
     >>> sophiegermain(1025).bit_length()
     1025
+    >>> sophiegermain(2049).bit_length()
+    2049
 
 Development
 -----------
