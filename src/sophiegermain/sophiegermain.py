@@ -43,7 +43,7 @@ def _data(isprime: Callable[[int], bool]) -> Iterable[str]: # pragma: no cover
     included to enable easy reproducibility.
 
     .. |isprime| replace:: ``isprime``
-    .. isprime: https://docs.sympy.org/latest/modules/ntheory.html#sympy.ntheory.primetest.isprime
+    .. _isprime: https://docs.sympy.org/latest/modules/ntheory.html#sympy.ntheory.primetest.isprime
 
     The data in this library was generated using this function,
     with the ``isprime`` parameter instantiated to the |isprime|_ function
@@ -51,7 +51,7 @@ def _data(isprime: Callable[[int], bool]) -> Iterable[str]: # pragma: no cover
     """
     # Generate the smallest Sophie Germain prime for each possible binary
     # representation length.
-    for bit_length in range(2, 2048 + 1):
+    for bit_length in range(2, 2048 + 2):
 
         # Check if the candidate is a Sophie Germain prime.
         candidate = (

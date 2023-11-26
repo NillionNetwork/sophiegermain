@@ -24,7 +24,7 @@ Pure-Python library that provides a selection of `Sophie Germain primes <https:/
 
 Purpose
 -------
-Some cryptographic protocols involve the use of `Sophie Germain and safe primes <https://en.wikipedia.org/wiki/Safe_and_Sophie_Germain_primes>`__. In such cases, it is often useful to choose a Sophie Germain or safe prime based on the range of values (*i.e.*, `congruence classes of integers <https://en.wikipedia.org/wiki/Modular_arithmetic>`__ or `finite field <https://en.wikipedia.org/wiki/Finite_field>`__ elements) that an instantiation of a protocol must accommodate. This library provides immediate access to the smallest Sophie Germain prime for each possible binary representation length (up to and including 1025 bits).
+Some cryptographic protocols involve the use of `Sophie Germain and safe primes <https://en.wikipedia.org/wiki/Safe_and_Sophie_Germain_primes>`__. In such cases, it is often useful to choose a Sophie Germain or safe prime based on the range of values (*i.e.*, `congruence classes of integers <https://en.wikipedia.org/wiki/Modular_arithmetic>`__ or `finite field <https://en.wikipedia.org/wiki/Finite_field>`__ elements) that an instantiation of a protocol must accommodate. This library provides immediate access to the smallest Sophie Germain prime for each possible binary representation length (up to and including 2049 bits).
 
 Installation and Usage
 ----------------------
@@ -59,6 +59,14 @@ This library makes it possible to retrieve instantly the smallest Sophie Germain
     1025
     >>> sophiegermain(2049).bit_length()
     2049
+
+Implementation
+--------------
+
+.. |isprime| replace:: ``isprime``
+.. _isprime: https://docs.sympy.org/latest/modules/ntheory.html#sympy.ntheory.primetest.isprime
+
+The function used to generate the collection of Sophie Germain primes made available by this library can be `found in the source code <https://sophiegermain.readthedocs.io/en/1.0.0/_modules/sophiegermain/sophiegermain.html>`__. The entries were tested using the |isprime|_ function found in the `SymPy <https://www.sympy.org/en/index.html>`__ library. This means that all values made available by this library that can be represented using 63 bits or fewer are definitively prime. For larger values, |isprime|_ relies on the `Baillie-PSW primality test <https://en.wikipedia.org/wiki/Baillie%E2%80%93PSW_primality_test>`__.
 
 Development
 -----------
