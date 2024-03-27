@@ -14,12 +14,12 @@ Pure-Python library that provides a selection of `Sophie Germain primes <https:/
    :target: https://sophiegermain.readthedocs.io/en/latest/?badge=latest
    :alt: Read the Docs documentation status.
 
-.. |actions| image:: https://github.com/nillion-oss/sophiegermain/workflows/lint-test-cover-docs/badge.svg
-   :target: https://github.com/nillion-oss/sophiegermain/actions/workflows/lint-test-cover-docs.yml
+.. |actions| image:: https://github.com/NillionNetwork/sophiegermain/workflows/lint-test-cover-docs/badge.svg
+   :target: https://github.com/NillionNetwork/sophiegermain/actions/workflows/lint-test-cover-docs.yml
    :alt: GitHub Actions status.
 
-.. |coveralls| image:: https://coveralls.io/repos/github/nillion-oss/sophiegermain/badge.svg?branch=main
-   :target: https://coveralls.io/github/nillion-oss/sophiegermain?branch=main
+.. |coveralls| image:: https://coveralls.io/repos/github/NillionNetwork/sophiegermain/badge.svg?branch=main
+   :target: https://coveralls.io/github/NillionNetwork/sophiegermain?branch=main
    :alt: Coveralls test coverage summary.
 
 Purpose
